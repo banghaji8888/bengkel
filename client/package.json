@@ -15,10 +15,12 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "chart.js": "^2.7.3",
     "cors": "^2.8.4",
     "font-awesome": "^4.7.0",
     "vue": "^2.5.2",
     "vue-acl": "^4.0.6",
+    "vue-chartjs": "^3.4.0",
     "vue-perfect-scrollbar": "^0.1.0",
     "vue-router": "^3.0.1",
     "vuetify": "^1.2.4",

@@ -1,90 +1,52 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div class="container fluid">
+    <v-flex lg12 sm12 xs12 mb-4>
+      <v-widget title="Transaksi Per Hari" content-bg="white">
+        <v-btn icon slot="widget-header-action">
+          <v-icon class="text--secondary">refresh</v-icon>
+        </v-btn>
+        <div slot="widget-content">
+            <d-chart/>  
+        </div>
+      </v-widget>  
+    </v-flex>
+    <v-layout row wrap>
+      <v-flex lg6 sm12 xs12 pr-3>
+        <v-widget title="Transaksi Per Bulan" content-bg="white">
+          <v-btn icon slot="widget-header-action">
+            <v-icon class="text--secondary">refresh</v-icon>
+          </v-btn>
+          <div slot="widget-content">
+              <m-chart/>  
+          </div>
+        </v-widget>  
+      </v-flex>
+      <v-flex lg6 sm12 xs12 pl-3>
+        <v-widget title="Transaksi Per Tahun" content-bg="white">
+          <v-btn icon slot="widget-header-action">
+            <v-icon class="text--secondary">refresh</v-icon>
+          </v-btn>
+          <div slot="widget-content">
+              <y-chart/>  
+          </div>
+        </v-widget>  
+      </v-flex>
+    </v-layout>  
   </div>
 </template>
 
 <script>
+import YChart from '@/components/chart/ychart'
+import MChart from '@/components/chart/mchart'
+import DChart from '@/components/chart/dchart'
+import VWidget from '@/components/VWidget'
 export default {
+  components: {
+    VWidget,
+    YChart,
+    MChart,
+    DChart
+  },
   name: 'HelloWorld',
   data () {
     return {

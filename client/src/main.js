@@ -8,6 +8,7 @@ import Vuetify from 'vuetify'
 import 'font-awesome/css/font-awesome.css'
 import store from '@/store/store'
 import './theme/default.styl'
+import '../static/css/index.css'
 // import 'vuetify/dist/vuetify.min.css'
 // import colors from 'vuetify/util/colors'
 Vue.use(Vuetify, {

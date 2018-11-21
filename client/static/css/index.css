@@ -1,0 +1,7 @@
+.padding20{
+    padding: 20px;
+}
+
+.v-toolbar__content>:not(.v-btn):not(.v-menu):first-child:not(:only-child), .v-toolbar__extension>:not(.v-btn):not(.v-menu):first-child:not(:only-child) {
+    margin-left: 16px;
+}
