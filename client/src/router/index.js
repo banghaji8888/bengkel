@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import { AclRule } from 'vue-acl'
-import dashboard from '@/components/Dashboard'
+import dashboard from '@/pages/Dashboard'
+import servis from '@/pages/servis/Servis'
+import karyawan from '@/pages/karyawan/List'
+import formKaryawan from '@/pages/karyawan/Form'
 import notfound from '@/components/default/NotFound'
-import register from '@/components/Register'
-import login from '@/components/Login'
+import register from '@/pages/Register'
+import login from '@/pages/Login'
 import deny from '@/components/default/Deny'
 
 Vue.use(Router)
@@ -36,6 +39,33 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: dashboard,
+      meta: {
+        rule: 'isGuest',
+        private: true
+      }
+    },
+    {
+      path: '/servis',
+      name: 'servis',
+      component: servis,
+      meta: {
+        rule: 'isGuest',
+        private: true
+      }
+    },
+    {
+      path: '/karyawan',
+      name: 'karyawan',
+      component: karyawan,
+      meta: {
+        rule: 'isGuest',
+        private: true
+      }
+    },
+    {
+      path: '/form-karyawan',
+      name: 'formKaryawan',
+      component: formKaryawan,
       meta: {
         rule: 'isGuest',
         private: true

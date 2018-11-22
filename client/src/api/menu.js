@@ -6,6 +6,18 @@ const Menu = [
     icon: 'dashboard',
     name: 'dashboard'
   },
+  {
+    title: 'Servis',
+    group: 'apps',
+    icon: 'build',
+    name: 'servis'
+  },
+  {
+    title: 'Karyawan',
+    group: 'apps',
+    icon: 'assignment_ind',
+    name: 'karyawan'
+  },
   { divider: true },
   { header: 'Extras' },
   {

@@ -8,8 +8,8 @@
       </v-toolbar>
       <v-divider v-if="enableHeader"></v-divider>
       <v-card-text :class="contentBg">
-        <slot name="widget-content"></slot>       
-      </v-card-text>       
+        <slot name="widget-content"></slot>
+      </v-card-text>
     </v-card>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   name: 'v-widget',
   props: {
     title: {
-      type: String,
+      type: String
     },
     enableHeader: {
       type: Boolean,
@@ -32,9 +32,9 @@ export default {
   },
   data () {
     return {
-    };
+    }
   },
   computed: {
-  },  
-};
+  }
+}
 </script>

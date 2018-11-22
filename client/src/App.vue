@@ -11,7 +11,7 @@
           </div>
            <!-- App Footer -->
           <v-footer height="auto" class="white pa-3 app--footer">
-            <span class="caption">Media Millenial &copy; {{ new Date().getFullYear() }}</span>
+            <span class="caption">Bang Haji &copy; {{ new Date().getFullYear() }}</span>
           </v-footer>
         </v-content>
         <!-- Go to top -->

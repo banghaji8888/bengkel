@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import AuthenticationService from '@/services/AuthenticationService'
-
 export default {
   data: () => ({
     loading: false,
@@ -53,7 +51,36 @@ export default {
     async login () {
       this.loading = true
       try {
-        const response = await AuthenticationService.login({
+        var response = {
+          error: 'Username dan password salah'
+        }
+        if (this.model.nik === 'admin' && this.model.password === 'admin') {
+          response = {
+            token: '2134567afsdf',
+            user: {
+              group: {
+                name: 'admin'
+              }
+            }
+          }
+        }
+
+        if (response.hasOwnProperty('error')) {
+          this.error = true
+          this.error_text = response.error
+          this.loading = false
+        } else {
+          var role = response.user.group.name
+          this.$store.dispatch('setToken', response.token)
+          this.$store.dispatch('setUser', response.user)
+          this.$store.dispatch('setRole', role)
+          this.$acl.change(role)
+          window.getApp.$emit('APP_LOGIN')
+          this.$router.push({
+            name: 'dashboard'
+          })
+        }
+        /* const response = await AuthenticationService.login({
           nik: this.model.nik,
           password: this.model.password
         })
@@ -72,7 +99,7 @@ export default {
           this.$router.push({
             name: 'dashboard'
           })
-        }
+        } */
       } catch (error) {
         this.error = error.response.data.error
       }

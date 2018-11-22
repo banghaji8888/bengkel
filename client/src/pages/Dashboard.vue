@@ -6,9 +6,9 @@
           <v-icon class="text--secondary">refresh</v-icon>
         </v-btn>
         <div slot="widget-content">
-            <d-chart/>  
+          <d-chart/>
         </div>
-      </v-widget>  
+      </v-widget>
     </v-flex>
     <v-layout row wrap>
       <v-flex lg6 sm12 xs12 pr-3>
@@ -17,9 +17,9 @@
             <v-icon class="text--secondary">refresh</v-icon>
           </v-btn>
           <div slot="widget-content">
-              <m-chart/>  
+            <m-chart/>
           </div>
-        </v-widget>  
+        </v-widget>
       </v-flex>
       <v-flex lg6 sm12 xs12 pl-3>
         <v-widget title="Transaksi Per Tahun" content-bg="white">
@@ -27,11 +27,14 @@
             <v-icon class="text--secondary">refresh</v-icon>
           </v-btn>
           <div slot="widget-content">
-              <y-chart/>  
+            <y-chart/>
           </div>
-        </v-widget>  
+        </v-widget>
       </v-flex>
-    </v-layout>  
+      <v-flex lg6 sm12 xs12 mt-4 pr-3>
+        <plain-table-order></plain-table-order>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
@@ -40,12 +43,14 @@ import YChart from '@/components/chart/ychart'
 import MChart from '@/components/chart/mchart'
 import DChart from '@/components/chart/dchart'
 import VWidget from '@/components/VWidget'
+import PlainTableOrder from '@/components/widgets/list/PlainTableOrder'
 export default {
   components: {
     VWidget,
     YChart,
     MChart,
-    DChart
+    DChart,
+    PlainTableOrder
   },
   name: 'HelloWorld',
   data () {

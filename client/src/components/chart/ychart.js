@@ -3,7 +3,6 @@ import { Bar } from 'vue-chartjs'
 export default {
   extends: Bar,
   mounted () {
-
     this.renderChart({
       labels: ['2016', '2017', '2018'],
       datasets: [
