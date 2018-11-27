@@ -16,8 +16,8 @@
             hide-details
             class="hidden-sm-and-down"
             ></v-text-field>     
-            <v-btn icon outline small fab color="success" @click="form">
-              <v-icon>add</v-icon>
+            <v-btn raised @click="form" color="success">
+              New
             </v-btn>         
           </v-toolbar>
           <v-divider></v-divider>
@@ -45,11 +45,14 @@
                 <td>{{ props.item.email }}</td>
                 <td>{{ props.item.phone }}</td>
                 <td>
-                  <v-btn depressed outline icon fab dark color="primary" small>
-                    <v-icon>edit</v-icon>
+                  <v-btn icon>
+                    <v-icon color="primary">edit</v-icon>
                   </v-btn>
-                  <v-btn depressed outline icon fab dark color="pink" small>
-                    <v-icon>delete</v-icon>
+                  <v-btn icon>
+                    <v-icon color="red">delete</v-icon>
+                  </v-btn>
+                  <v-btn icon>
+                    <v-icon color="info">info</v-icon>
                   </v-btn>
                 </td>
               </template>

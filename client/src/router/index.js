@@ -59,7 +59,8 @@ export default new Router({
       component: karyawan,
       meta: {
         rule: 'isGuest',
-        private: true
+        private: true,
+        title: "karyawan"
       }
     },
     {

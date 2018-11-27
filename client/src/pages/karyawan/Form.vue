@@ -1,8 +1,44 @@
 <template>
   <div class="container fluid">
     <v-layout row wrap>
-      <v-flex sm12>
+      <v-flex lg12>
         <h3>Form Karyawan</h3>
+        <v-card class="pa-4">
+          <v-form>
+            <div class="d-flex my-2">
+              <v-text-field 
+                label="Nama"
+              ></v-text-field>
+            </div>
+            <div class="d-flex my-2">
+              <v-text-field 
+                label="Email"
+              ></v-text-field>
+            </div>
+            <div class="d-flex my-2">
+              <v-text-field 
+                label="Phone"
+              ></v-text-field>
+            </div>
+            <div class="d-flex my-2">
+              <v-textarea
+                name="input-7-1"
+                label="Alamat"
+              ></v-textarea>
+            </div>
+            <div class="d-flex my-2">
+              <v-radio-group v-model="row" row>
+                <v-radio label="Pria" value="pria"></v-radio>
+                <v-radio label="Wanita" value="wanita"></v-radio>
+              </v-radio-group>
+            </div>
+            <div class="d-flex my-2">
+               <div class="form-btn">
+                  <v-btn @click="submit" color="success">Simpan</v-btn>
+                </div>
+            </div>
+          </v-form>
+        </v-card>
       </v-flex>        
     </v-layout>
   </div>
@@ -13,6 +49,14 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      row: null
+    }
+  },
+  methods: {
+    submit () {
+      this.$router.push({
+        name: 'karyawan'
+      })
     }
   }
 }
