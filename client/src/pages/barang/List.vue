@@ -2,7 +2,7 @@
   <div class="container fluid">
     <v-layout row wrap>
       <v-flex sm12>
-        <h3>Data Karyawan</h3>
+        <h3>Data Barang</h3>
       </v-flex>        
       <v-flex lg12>
         <v-card>
@@ -41,9 +41,10 @@
                 ></v-checkbox>
               </td>              
                 <td>{{ props.item.id }}</td>
-                <td>{{ props.item.name }}</td>
-                <td>{{ props.item.email }}</td>
-                <td>{{ props.item.phone }}</td>
+                <td>{{ props.item.product }}</td>
+                <td>{{ props.item.harga_beli }}</td>
+                <td>{{ props.item.harga_jual }}</td>
+                <td>{{ props.item.stock }}</td>
                 <td>
                   <v-btn icon>
                     <v-icon color="primary">edit</v-icon>
@@ -75,7 +76,7 @@
 </template>
 
 <script>
-import { Items as Users } from '@/api/karyawan'
+import Items from '@/api/order'
 export default {
   name: 'HelloWorld',
   data () {
@@ -91,29 +92,33 @@ export default {
           },
           {
             text: 'Name',
-            value: 'name'
+            value: 'product'
           },
           {
-            text: 'Email',
-            value: 'email'
+            text: 'Harga Beli',
+            value: 'harga_beli'
           },
           {
-            text: 'Phone',
-            value: 'phone'
+            text: 'Harga Jual',
+            value: 'harga_jual'
+          },
+          {
+            text: 'Stok',
+            value: 'stock'
           },
           {
             text: 'Action',
             value: ''
           },
         ],
-        items: Users
+        items: Items
       }
     }
   },
   methods:{
     form () {
       this.$router.push({
-        name: 'formKaryawan'
+        name: 'formBarang'
       })
     }
   }

@@ -5,6 +5,8 @@ import dashboard from '@/pages/Dashboard'
 import servis from '@/pages/servis/Servis'
 import karyawan from '@/pages/karyawan/List'
 import formKaryawan from '@/pages/karyawan/Form'
+import barang from '@/pages/barang/List'
+import formBarang from '@/pages/barang/Form'
 import notfound from '@/components/default/NotFound'
 import register from '@/pages/Register'
 import login from '@/pages/Login'
@@ -67,6 +69,25 @@ export default new Router({
       path: '/form-karyawan',
       name: 'formKaryawan',
       component: formKaryawan,
+      meta: {
+        rule: 'isGuest',
+        private: true
+      }
+    },
+    {
+      path: '/barang',
+      name: 'barang',
+      component: barang,
+      meta: {
+        rule: 'isGuest',
+        private: true,
+        title: "barang"
+      }
+    },
+    {
+      path: '/form-barang',
+      name: 'formBarang',
+      component: formBarang,
       meta: {
         rule: 'isGuest',
         private: true

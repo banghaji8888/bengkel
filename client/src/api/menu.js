@@ -18,6 +18,12 @@ const Menu = [
     icon: 'assignment_ind',
     name: 'karyawan'
   },
+  {
+    title: 'Barang',
+    group: 'apps',
+    icon: 'work',
+    name: 'barang'
+  },
   { divider: true },
   { header: 'Extras' },
   {
