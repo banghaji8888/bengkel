@@ -9,7 +9,7 @@ export default {
         {
           label: 'Transaksi',
           backgroundColor: '#f87979',
-          data: [20, 10, 2, 3]
+          data: [20, 10, 3, 5]
         }
       ]
     }, {responsive: true, maintainAspectRatio: false})

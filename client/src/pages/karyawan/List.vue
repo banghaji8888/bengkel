@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex sm12>
         <h3>Data Karyawan</h3>
-      </v-flex>        
+      </v-flex>
       <v-flex lg12>
         <v-card>
           <v-toolbar card color="white">
@@ -15,10 +15,10 @@
             v-model="search"
             hide-details
             class="hidden-sm-and-down"
-            ></v-text-field>     
+            ></v-text-field>
             <v-btn raised @click="form" color="success">
               New
-            </v-btn>         
+            </v-btn>
           </v-toolbar>
           <v-divider></v-divider>
           <v-card-text class="pa-0">

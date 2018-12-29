@@ -1,5 +1,4 @@
 const Menu = [
-  { header: 'Apps' },
   {
     title: 'Dashboard',
     group: 'apps',
@@ -24,8 +23,6 @@ const Menu = [
     icon: 'work',
     name: 'barang'
   },
-  { divider: true },
-  { header: 'Extras' },
   {
     title: 'Pages',
     group: 'extra',
