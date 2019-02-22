@@ -15,11 +15,11 @@
                 label="Harga Beli"
               ></v-text-field>
             </div>
-            <div class="d-flex my-2">
+            <v-flex class="d-flex my-2">
               <v-text-field 
                 label="Harga Jual"
               ></v-text-field>
-            </div>
+            </v-flex>
             <div class="d-flex my-2">
               <v-text-field 
                 label="Stok"
